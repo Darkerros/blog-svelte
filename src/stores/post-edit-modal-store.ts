@@ -1,4 +1,7 @@
-import {writable} from "svelte/store";
+import { writable } from "svelte/store";
+
+import { v4 as uuidv4 } from 'uuid';
+
 import type {PostResource} from "../types/post-resource.ts";
 
 interface PostEditModalStoreState {
@@ -8,6 +11,7 @@ interface PostEditModalStoreState {
 
 const PostEditModalStore = writable<PostEditModalStoreState>({
   post: {
+    id: uuidv4(),
     title: '',
     description: '',
     createdAt: new Date(),
@@ -15,3 +19,5 @@ const PostEditModalStore = writable<PostEditModalStoreState>({
   },
   isModalOpen: false
 })
+
+export default PostEditModalStore;
