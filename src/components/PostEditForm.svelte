@@ -50,17 +50,23 @@
     display: flex;
     flex-direction: column;
 
+    background: #d5ffed;
+    border-radius: 5px;
+
     &__title-input {
       padding: 5px;
       border-radius: 3px;
 
       border: none;
-      background: #ececec;
+      background: white;
     }
 
     &__description-input {
       height: 170px;
       resize: none;
+
+	  border: none;
+	  background: white;
     }
 
     &__submit-button {
@@ -90,7 +96,7 @@
     &__validation-eror-message {
       margin: 0;
 
-      color: red;
+      color: black;
     }
   }
 </style>
